@@ -1,0 +1,15 @@
+textarea,
+input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0 12px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+label {
+  padding-left: 16px;
+  color: $gray;
+}

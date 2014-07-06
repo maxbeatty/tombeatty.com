@@ -1,0 +1,31 @@
+{
+  "name": "tombeatty.com",
+  "version": "0.0.0",
+  "description": "A microsite for my dad",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxbeatty/tombeatty.com.git"
+  },
+  "keywords": [
+    "microsite"
+  ],
+  "author": "Max Beatty",
+  "bugs": {
+    "url": "https://github.com/maxbeatty/tombeatty.com/issues"
+  },
+  "homepage": "https://github.com/maxbeatty/tombeatty.com",
+  "devDependencies": {
+    "gulp": "^3.4.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-minify-css": "^0.3.6",
+    "gulp-size": "^0.4.0"
+  },
+  "dependencies": {
+    "mandrill-api": "^1.0.40"
+  }
+}
