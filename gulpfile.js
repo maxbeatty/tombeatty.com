@@ -20,4 +20,8 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', ['sass', 'minify-css']);
+gulp.task('watch', function() {
+  gulp.watch('./scss/**/*.scss', ['sass', 'minify-css']);
+});
+
+gulp.task('default', ['sass', 'minify-css', 'watch']);

@@ -16,6 +16,9 @@
 
 */
 
+$md: 20px;
+$lg: 24px;
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -30,6 +33,14 @@
   padding: 1em .75em;
   text-decoration: none;
   transition: color .4s, background-color .4s, border .4s;
+
+  @include break(medium) {
+    font-size: $md;
+  }
+
+  @include break(large) {
+    font-size: $lg;
+  }
 }
 
 .btn:hover {
@@ -86,6 +97,12 @@
   margin-right: auto;
   text-align: center;
   width: 100%;
+
+  @include break(not-small) {
+    width: inherit;
+    display: inline-block;
+    margin: 0 0.4em;
+  }
 }
 
 /* BLUES */
@@ -105,12 +122,4 @@
   color: #fff;
   background-color: $navy;
   border-color: $navy;
-}
-
-/* Keep it mobile-first and responsive */
-
-@media screen and (min-width: 32em) {
-  .btn--full {
-    max-width: 16em!important;
-  }
 }

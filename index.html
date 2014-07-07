@@ -19,26 +19,28 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-          <h1 class="name">Tom Beatty</h1>
-
           <img class="profile" src="img/profile.jpg" alt="Tom Beatty">
+          <h1 class="name">Tom Beatty</h1>
         </header>
 
-        <dl class="icon-list">
-          <dt class="icon icon-location">Lives</dt>
-          <dd class="icon-d">Carmel, Indiana</dd>
+        <section id="main">
 
-          <dt class="icon icon-work">Works</dt>
-          <dd class="icon-d">
-            <a href="http://www.caseindy.com/">Case Design/Remodeling</a>
-          </dd>
+          <dl class="icon-list">
+            <dt class="icon icon-location">Lives</dt>
+            <dd class="icon-d">Carmel, Indiana</dd>
 
-          <dt class="icon icon-like">Likes</dt>
-          <dd class="icon-d">Family, Tennis, and Euchre</dd>
-        </dl>
+            <dt class="icon icon-work">Works</dt>
+            <dd class="icon-d">
+              <a href="http://www.caseindy.com/">Case Design/Remodeling</a>
+            </dd>
 
-        <button class="btn btn--full btn--blue js-show-email">Email</button>
-        <a class="btn btn--full" href="http://www.linkedin.com/pub/tom-beatty/79/3a0/652">LinkedIn</a>
+            <dt class="icon icon-like">Likes</dt>
+            <dd class="icon-d">Family, Tennis, and Euchre</dd>
+          </dl>
+
+          <button class="btn btn--full btn--blue js-show-email">Email</button>
+          <a class="btn btn--full" href="http://www.linkedin.com/pub/tom-beatty/79/3a0/652">LinkedIn</a>
+        </section>
 
         <form class="js-email-form fake-modal">
           <label for="from">From</label>
@@ -64,13 +66,18 @@
           ga('send', 'pageview');
 
           $(function() {
-            $form = $('.js-email-form');
+            var $main = $('#main'),
+                $form = $('.js-email-form'),
+                switcheroo = function(showMain) {
+                  $main.fadeToggle(showMain);
+                  $form.fadeToggle(showMain);
+                }
             $('.js-show-email').click(function() {
-              $form.fadeIn();
+              switcheroo(false);
             });
 
             $('.js-hide-email').click(function() {
-              $form.fadeOut();
+              switcheroo(true);
             })
 
             $form.submit(function(e) {
@@ -103,6 +110,7 @@
                     $form.fadeOut(function() {
                       $btn.text('Send');
                     });
+                    $main.fadeIn();
                   }, 600);
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
