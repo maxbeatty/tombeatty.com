@@ -142,7 +142,29 @@ $lg: 64px;
   display: none;
   position: absolute;
   top: 160px;
-  left: 0;
-  right: 0;
+  width: 100%;
   background-color: $white;
+
+  @include break(not-small) {
+    $size: 500px;
+    width: $size;
+    left: 50%;
+    margin-left: $size / -2;
+    border: 2px solid $gray;
+    border-radius: 0.3em;
+    padding: 2em 0;
+
+    .btn--full {
+      width: 70%;
+      margin-left: 2em;
+    }
+  }
+
+  @include break(medium) {
+    top: 116px;
+  }
+
+  @include break(large) {
+    top: 142px;
+  }
 }

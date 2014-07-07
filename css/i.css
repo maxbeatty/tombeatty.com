@@ -519,18 +519,30 @@ a:active {
   background-color: #001F3F;
   border-color: #001F3F; }
 
-/* Keep it mobile-first and responsive */
 textarea, input {
+  display: block;
   width: 100%;
   padding: 12px 16px;
   margin: 8px 0 12px; }
+  @media screen and (min-width: 48em) {
+    textarea, input {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto; } }
 
 textarea {
   min-height: 100px; }
 
 label {
+  display: block;
   padding-left: 16px;
   color: #aaa; }
+  @media screen and (min-width: 48em) {
+    label {
+      padding: 0;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto; } }
 
 /* Add your sass to sass/_styles.scss */
 /* ==========================================================================
@@ -643,6 +655,22 @@ header {
   display: none;
   position: absolute;
   top: 160px;
-  left: 0;
-  right: 0;
+  width: 100%;
   background-color: #fff; }
+  @media screen and (min-width: 48em) {
+    .fake-modal {
+      width: 500px;
+      left: 50%;
+      margin-left: -250px;
+      border: 2px solid #aaa;
+      border-radius: 0.3em;
+      padding: 2em 0; }
+      .fake-modal .btn--full {
+        width: 70%;
+        margin-left: 2em; } }
+  @media screen and (min-width: 48em) and (max-width: 64em) {
+    .fake-modal {
+      top: 116px; } }
+  @media screen and (min-width: 64em) {
+    .fake-modal {
+      top: 142px; } }
