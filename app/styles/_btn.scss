@@ -1,0 +1,35 @@
+.btn,
+.btn:link,
+.btn:visited {
+  margin: 1.5em auto;
+  padding: 10px;
+  border-radius: .3em;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  text-decoration: none;
+  color: $white;
+  text-align: center;
+  letter-spacing: .05em;
+
+  &:disabled {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-primary {
+  font-size: $fontLarge;
+  background-color: $brand-green;
+  border-color: $brand-green;
+  width: 100%;
+}
+
+.btn-secondary {
+  background-color: rgba($black, 0.1);
+  color: $silver;
+  width: 60%;
+}

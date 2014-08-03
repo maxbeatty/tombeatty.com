@@ -1,0 +1,25 @@
+
+@mixin media-query($media-query) {
+  @if $media-query == small {
+    @media only screen and (min-width: $breakSm) and (max-width: $breakMd) { @content; }
+  }
+
+  @if $media-query == medium {
+    @media only screen and (min-width: $breakMd) and (max-width: $breakLg) { @content; }
+  }
+
+  @if $media-query == large {
+    @media only screen and (min-width: $breakLg) and (max-width: $breakXl) { @content; }
+  }
+
+  @if $media-query == huge {
+    @media only screen and (min-width: $breakXl) { @content; }
+  }
+
+}
+
+// Just some helpers...
+@mixin small { @include media-query(small) { @content }; }
+@mixin medium { @include media-query(medium) { @content }; }
+@mixin large { @include media-query(large) { @content }; }
+@mixin huge { @include media-query(huge) { @content }; }

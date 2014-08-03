@@ -1,0 +1,32 @@
+/*
+https://gist.github.com/marcedwards/3446599
+https://github.com/kaelig/hidpi
+*/
+
+// image extension
+$hidpi-ext: jpg !default;
+
+// Change default filename postfix
+// default: imagename@2x.jpg
+$hidpi-postfix: '@2x' !default;
+
+// Default pixel ratio: 1.3 to support Nexus 7
+// Depending on your target, you may want to set a
+// more suitable minimum pixel ratio here:
+// http://bjango.com/articles/min-device-pixel-ratio/
+$hidpi-min-pixel-ratio: 1.3 !default;
+
+@mixin hidpi-bg($imgPath, $width, $height, $ext: $hidpi-ext, $postfix: $hidpi-postfix) {
+  $image-fullname: '#{$imgPath}.#{$ext}';
+  $image-hidpi: '#{$imgPath}#{$postfix}.#{$ext}';
+
+  background: url($image-fullname) no-repeat center center fixed;
+  background-size: cover;
+
+  @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio),
+         (min-resolution: $hidpi-min-pixel-ratio * 96dpi),
+         (min-resolution: $hidpi-min-pixel-ratio * 1dppx) {
+
+    background-image: url($image-hidpi);
+  }
+}

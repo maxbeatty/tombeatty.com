@@ -1,0 +1,11 @@
+a,
+a:link,
+a:visited {
+  color: #e9f2f6;
+  text-decoration: none;
+  text-shadow: rgba($brand-navy,0.2) 1px 1px 1px;
+}
+
+a:active {
+  color: $brand-green;
+}
