@@ -49,12 +49,12 @@ main {
 }
 
 .callout {
-  margin: ($breath*1.5) 0;
+  margin: $fontXXLarge 0;
   padding: $breath;
   color: $brand-navy;
   font-size: 18px;
+  line-height: 1.2;
   background-color: rgba(invert($brand-navy), 0.1);
-  box-shadow: inset 0px -1px 1px 0px rgba(#fff, 0.2);
   border-radius: .3em;
 
   strong {
