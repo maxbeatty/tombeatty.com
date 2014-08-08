@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="I have been improving people's homes in the greater Indianapolis area for more than 30 years.">
+    <meta name="description" content="I have been designing homes in the greater Indianapolis area for more than 30 years.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tom Beatty</title>
 
@@ -38,18 +38,21 @@
       </p>
 
       <nav>
-        <button class="btn btn-primary">Email</button>
+        <a href="javascript:void(0)" class="btn btn-primary">Email</button>
         <a href="http://www.linkedin.com/pub/tom-beatty/79/3a0/652" class="btn btn-secondary">LinkedIn</a>
       </nav>
 
     </main>
 
-    <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
+      document.querySelector('.btn-primary').onclick = function (e) {
+        this.href = [
+          ':otliam'.split('').reverse().join(''),
+          document.querySelector('.lead strong').textContent.toLowerCase().replace(/\s/, ''),
+          '@','aol.com'].join('')
+      };
+
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

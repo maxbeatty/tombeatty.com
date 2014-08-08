@@ -1,0 +1,29 @@
+// iPad-Landscape
+@include large {
+  .lead {
+    font-size: $fontXLarge;
+    margin-left: $breath;
+    margin-right: $breath;
+  }
+
+  .callout {
+    font-size: 2em;
+    margin: 2em $breath;
+  }
+
+  .btn {
+    font-size: 2.5em;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    font-size: 3em;
+    width: 45%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .btn-secondary {
+    width: 30%;
+  }
+}

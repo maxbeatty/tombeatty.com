@@ -9,13 +9,15 @@ $breakXl: 1900px;
 
 $fontDefault: 'Oxygen', Helvetica, Arial, sans-serif !default;
 
-$fontSmall: 13px !default;
+$fontSmall: 0.8125em !default; // 13px
 $fontBase: 16px  !default;
-$fontMedium: 20px !default;
-$fontLarge: 24px !default;
-$fontXLarge: 52px !default;
-$fontXXLarge: 68px !default;
-$fontHuge: 110px !default;
+$fontMedium: 1.25em !default; // 20px
+$fontLarge: 1.5em !default; // 24px
+$fontXLarge: 3.25em !default; // 52px
+$fontXXLarge: 4.25em !default; // 68px
+$fontHuge: 6.875em !default; // 110px
+
+$breath: $fontMedium;
 
 /*=====COLORS=====*/
 $brand-green: #00B293;

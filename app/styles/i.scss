@@ -8,58 +8,10 @@
 @import "_btn";
 @import "_type";
 
-body {
-  font-family: $fontDefault;
-  font-size: $fontBase;
+@import "_bg";
 
-  @include hidpi-bg('../images/bg/iPhone', 320px, 568px);
-
-  @include small {
-    @include hidpi-bg('../images/bg/iPhone-Landscape', 480px, 320px);
-  }
-
-  @include medium {
-    @include hidpi-bg('../images/bg/iPad', 768px, 1024px);
-  }
-
-  @include large {
-    @include hidpi-bg('../images/bg/iPad-Landscape', 1024px, 768px);
-  }
-
-  @include huge {
-    @include hidpi-bg('../images/bg/hd', 1900px, 1080px);
-  }
-}
-
-$breath: 20px;
-
-main {
-  padding: 0 $breath;
-}
-
-.lead {
-  color: $brand-navy;
-  font-size: $fontLarge;
-
-  strong {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: $brand-green;
-  }
-}
-
-.callout {
-  margin: $fontXXLarge 0;
-  padding: $breath;
-  color: $brand-navy;
-  font-size: 18px;
-  line-height: 1.2;
-  background-color: rgba(invert($brand-navy), 0.1);
-  border-radius: .3em;
-
-  strong {
-    display: block;
-    margin-bottom: 0.4em;
-    font-size: 20px;
-  }
-}
+@import "responses/_default";
+@import "responses/_small";
+@import "responses/_medium";
+@import "responses/_large";
+@import "responses/_huge";
