@@ -1,9 +1,7 @@
-// iPad-Landscape
-@include large {
+@mixin large-base {
   .lead {
     font-size: $fontXLarge;
-    margin-left: $breath;
-    margin-right: $breath;
+    margin: 1em $breath;
   }
 
   .callout {
@@ -25,5 +23,27 @@
 
   .btn-secondary {
     width: 30%;
+  }
+}
+
+// iPad-Landscape
+@include ipadland {
+  @include large-base;
+}
+
+// larger than an iPad (desktop)
+@include large {
+  @include large-base;
+
+  main {
+    width: $breakLg;
+    margin: 0 auto;
+    font-size: 90%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 }

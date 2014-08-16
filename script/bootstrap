@@ -1,19 +1,19 @@
-!#/bin/bash
-
-# node > 0.10.x
-node --version
-
-# ruby > 1.8.7
-ruby --version
-gem --version
-
-# sass > 3.3.x
-sass --version
+#!/bin/bash
 
 # nvm?
 if hash nvm 2>/dev/null; then
   nvm use
 fi
+
+echo "Node version should be > 0.10.x"
+node --version
+
+echo "Ruby version should be > 1.8.7"
+ruby --version
+gem --version
+
+echo "Sass version should be > 3.3.x"
+sass --version
 
 # gulp
 npm install --global gulp
