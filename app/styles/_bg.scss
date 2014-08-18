@@ -12,10 +12,6 @@ html {
     @include hidpi-bg('../images/bg/iPad', 768px, 1024px);
   }
 
-  @include ipadland {
-    @include hidpi-bg('../images/bg/iPad-Landscape', 1024px, 768px);
-  }
-
   @include large {
     @include hidpi-bg('../images/bg/iPad-Landscape', 1024px, 768px);
   }

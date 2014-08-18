@@ -21,7 +21,8 @@
     outline: none;
   }
 
-  @include default {
+  @media only screen and (max-width: $breakSm),
+  only screen and (min-width: $breakMd) and (max-width: $breakLg - 1) {
     display: block;
   }
 }
