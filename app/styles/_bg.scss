@@ -1,0 +1,22 @@
+html {
+  font-family: $fontDefault;
+  font-size: $fontBase;
+
+  @include hidpi-bg('../images/bg/iPhone', 320px, 568px);
+
+  @include small {
+    @include hidpi-bg('../images/bg/iPhone-Landscape', 480px, 320px);
+  }
+
+  @include medium {
+    @include hidpi-bg('../images/bg/iPad', 768px, 1024px);
+  }
+
+  @include large {
+    @include hidpi-bg('../images/bg/iPad-Landscape', 1024px, 768px);
+  }
+
+  @include huge {
+    @include hidpi-bg('../images/bg/hd', 1900px, 1080px);
+  }
+}

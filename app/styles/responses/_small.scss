@@ -1,0 +1,31 @@
+// iPhone-Landscape
+@include small {
+  .lead,
+  .callout {
+    float: left;
+    width: 45%;
+  }
+
+  .lead {
+    strong {
+      display: block;
+    }
+  }
+
+  .callout {
+    margin: $fontXLarge 0 $fontLarge;
+  }
+
+  nav {
+    clear: left;
+  }
+
+  .btn-primary {
+    width: 45%;
+    margin-right: 10%;
+  }
+
+  .btn-secondary {
+    width: 25%;
+  }
+}

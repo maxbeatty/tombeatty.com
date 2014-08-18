@@ -1,0 +1,40 @@
+// iPhone
+main {
+  padding: 0 $breath;
+}
+
+.lead {
+  color: $brand-navy;
+  font-size: $fontLarge;
+
+  strong {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: $brand-green;
+  }
+}
+
+.callout {
+  margin: $fontXXLarge 0;
+  padding: $breath;
+  color: $brand-navy;
+  line-height: 1.25;
+  background-color: rgba(invert($brand-navy), 0.1);
+  border-radius: .3em;
+
+  strong {
+    display: block;
+    margin-bottom: 0.4em;
+    font-size: $fontMedium;
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn-secondary {
+  width: 60%;
+}

@@ -1,0 +1,22 @@
+// iPad
+
+@include medium {
+  .lead {
+    font-size: $fontXLarge;
+    margin: 1em 1em 2em;
+  }
+
+  .callout {
+    font-size: $fontLarge;
+    margin: $fontXXLarge 7% $fontXLarge;
+  }
+
+  .btn-primary {
+    width: 75%;
+    font-size: $fontXLarge;
+  }
+
+  .btn-secondary {
+    font-size: 2em;
+  }
+}
