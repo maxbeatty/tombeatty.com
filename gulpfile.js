@@ -155,7 +155,7 @@ gulp.task('serve:dist', ['default'], function () {
 });
 
 // Build Production Files, the Default Task
-gulp.task('default', ['clean'], function (cb) {
+gulp.task('default', ['clean', 'cname'], function (cb) {
   runSequence('styles', ['jshint', 'html', 'images', 'copy'], cb);
 });
 
