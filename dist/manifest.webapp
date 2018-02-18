@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Tom Beatty",
   "launch_path": "/index.html",
-  "description": "I have been designing homes in the greater Indianapolis area for more than 30 years.",
+  "description": "I have been designing homes in the greater Indianapolis area for more than 35 years.",
   "icons": {
     "128": "/images/touch/icon-128x128.png"
   },
@@ -14,12 +14,11 @@
     "*"
   ],
   "default_locale": "en",
-  "permissions": {
-  },
+  "permissions": {},
   "locales": {
     "en": {
       "name": "Tom Beatty",
-      "description": "I have been designing homes in the greater Indianapolis area for more than 30 years."
+      "description": "I have been designing homes in the greater Indianapolis area for more than 35 years."
     }
   }
 }
